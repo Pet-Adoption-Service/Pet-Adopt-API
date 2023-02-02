@@ -30,4 +30,16 @@ const petsSchema = new mongoose.Schema({
 
 const PetsModel = mongoose.model('Pets', petsSchema)
 
-export { PetsModel, dbClose }
+const bookingSchema = new mongoose.Schema({
+    petName: { type: String, required: true },
+    name: { type: String, required: true},
+    date: { type: Date, required: true},
+    contactInfo: { type: String, required: true}
+
+})
+
+const BookingModel = mongoose.model('Booking', bookingSchema)
+
+
+
+export { PetsModel, BookingModel, dbClose }
