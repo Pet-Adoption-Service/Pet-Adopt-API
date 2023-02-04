@@ -57,6 +57,9 @@ const pets = [
 
 ]
 
+const bookings = [
+]
+
 await PetsModel.insertMany(pets)
 
 dbClose()
