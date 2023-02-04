@@ -4,7 +4,6 @@ import { PetsModel, BookingModel } from '../db.js'
 
 const router = express.Router()
 
-
 //get all
 router.get('/', async (req, res) =>res.send(await BookingModel.find().populate({ path: 'booking', select: 'petName' })))
 
@@ -22,8 +21,6 @@ router.get('/:id', async (req, res) => {
         res.status(404).send({ error: err.message })
     }
 })
-
-
 
 //Post request
 router.post('/', async (req, res) => {
@@ -74,8 +71,5 @@ router.put('/:id', async (req, res) => {
       res.status(500).send({ error: err.message })
     }
   })
-
-
-
 
 export default router

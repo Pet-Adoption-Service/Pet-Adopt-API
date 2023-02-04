@@ -58,8 +58,40 @@ const pets = [
 ]
 
 const bookings = [
+    {
+    "petName":"Cloud" ,
+    "name": "John Snow",
+    "date": "08/12/23: 1200",
+    "contactInfo": "040404040404"
+    },
+    {
+    "petName":"Tifa" ,
+    "name": "Joseph",
+    "date": "15/6/23",
+    "contactInfo": "045215324156"
+    },
+    {
+    "petName":"Cid" ,
+    "name": "Mary",
+    "date": "15/6/23",
+    "contactInfo": "045215324156"
+    },
+    {
+    "petName":"Barrett" ,
+    "name": "Petter",
+    "date": "15/6/23",
+    "contactInfo": "045215324156"
+    },
+    {
+    "petName":"Red V" ,
+    "name": "Clair",
+    "date": "15/6/23",
+     "contactInfo": "045215324156"
+    }
+
 ]
 
 await PetsModel.insertMany(pets)
+await BookingModel.insertMany(bookings)
 
 dbClose()
