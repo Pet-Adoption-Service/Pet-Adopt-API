@@ -5,6 +5,6 @@ const app = express()
 
 app.get('/', (req, res) => res.send({ info: 'The Pet Adoption Service' }))
 
-app.use('/pets', petRoutes)
+app.use('/pets', pet_routes)
 
 export default app

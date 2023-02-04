@@ -10,7 +10,7 @@ async function dbClose() {
 }
 
 try {
-    const m = mongoose.connect(process.env.ATLAS_DB_URL)
+    const m = await mongoose.connect(process.env.ATLAS_DB_URL)
     console.log(m.connection.readyState === 1 ? 'Mongoose connection successful' : 'Mongoose connection failed' )
 }
 catch (err) {
@@ -18,6 +18,7 @@ catch (err) {
 }
 
 const petsSchema = new mongoose.Schema({
+    profile: { type: mongoose.ObjectId, ref: 'Pet' },
     profile_image: { type: String, required: true},
     image2: {  type: String, required: false},
     image3: {  type: String, required: false},
@@ -30,10 +31,11 @@ const petsSchema = new mongoose.Schema({
 
 const PetsModel = mongoose.model('Pets', petsSchema)
 
+
 const bookingSchema = new mongoose.Schema({
     petName: { type: String, required: true },
     name: { type: String, required: true},
-    date: { type: Date, required: true},
+    date: { type: String, required: true},
     contactInfo: { type: String, required: true}
 
 })
