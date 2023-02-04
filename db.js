@@ -33,6 +33,7 @@ const PetsModel = mongoose.model('Pets', petsSchema)
 
 
 const bookingSchema = new mongoose.Schema({
+    booking: { type: mongoose.ObjectId, ref: 'Booking' },
     petName: { type: String, required: true },
     name: { type: String, required: true},
     date: { type: String, required: true},
