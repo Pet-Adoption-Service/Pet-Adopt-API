@@ -1,6 +1,7 @@
 import  express  from "express"
 import pet_routes from "./routes/pet_routes.js"
 import booking_routes from "./routes/booking_routes.js"
+import contact_routes from "./routes/contact_routes.js"
 import cors from 'cors'
 
 
