@@ -1,8 +1,12 @@
 import  express  from "express"
 import pet_routes from "./routes/pet_routes.js"
 import booking_routes from "./routes/booking_routes.js"
+import cors from 'cors'
+
 
 const app = express()
+
+app.use(cors())
 
 app.use(express.json())
 
