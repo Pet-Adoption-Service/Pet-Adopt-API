@@ -1,7 +1,8 @@
-import { PetsModel, BookingModel, dbClose, } from './db.js'
+import { PetsModel, BookingModel, dbClose, ContactModel, } from './db.js'
 
 await PetsModel.deleteMany()
 await BookingModel.deleteMany()
+await ContactModel.deleteMany()
 
 const pets = [
         {
@@ -91,7 +92,26 @@ const bookings = [
 
 ]
 
+const contacts = [
+    {
+      "name": "John Doe" ,
+      "email": "Johndoe@email.com",
+      "message": "i like this service"
+
+    },
+    {
+      "name": "Mary Jane" ,
+      "email": "MaryJane@email.com",
+      "message": "this is a bad service"
+
+    }
+
+
+]
+
 await PetsModel.insertMany(pets)
 await BookingModel.insertMany(bookings)
+await ContactModel.insertMany(contacts)
+
 
 dbClose()

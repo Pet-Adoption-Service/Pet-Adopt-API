@@ -43,6 +43,16 @@ const bookingSchema = new mongoose.Schema({
 
 const BookingModel = mongoose.model('Booking', bookingSchema)
 
+const contactSchema = new mongoose.Schema({
+    contact: { type: mongoose.ObjectId, ref: 'Contact' },
+    name: { type: String, required: true },
+    email: { type: String, required: true},
+    message: { type: String, required: true},
+})
+
+const ContactModel = mongoose.model('Contact', contactSchema)
 
 
-export { PetsModel, BookingModel, dbClose }
+
+
+export { PetsModel, BookingModel, dbClose, ContactModel }

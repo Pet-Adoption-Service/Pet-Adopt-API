@@ -16,4 +16,6 @@ app.use('/pets', pet_routes)
 
 app.use('/bookings', booking_routes)
 
+app.use('/contact', contact_routes)
+
 export default app
