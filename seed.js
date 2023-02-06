@@ -6,7 +6,7 @@ await ContactModel.deleteMany()
 
 const pets = [
         {
-        "profile_image": "profile image",
+        "profile_image": "./src/components/images/profile1-1.jpg",
         "image2": "image 2",
         "image3": "image 3",
         "name": "Cloud",
